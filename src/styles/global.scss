@@ -1,0 +1,69 @@
+@import "variables";
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,600,700";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: $color-bg;
+    font-family: "Poppins";
+    width: 100%;
+    max-width: $large;
+    margin: 0 auto;
+    color: #fff;
+    overflow-x: hidden;
+
+    * {
+        font-family: "Poppins";
+    }
+}
+
+body {
+    padding: 0 60px;
+
+    @media screen and (max-width: 1080px) {
+        padding: 0 40px;
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 0 20px;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.loader {
+    border: solid 2px $color-green;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    -webkit-transition: all 0.5s ease-in;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    transition: all 0.5s ease-in;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

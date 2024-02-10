@@ -1,0 +1,91 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IPerpsV2MarketOffchainOrders",
+  "sourceName": "contracts/interfaces/IPerpsV2MarketOffchainOrders.sol",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "cancelOffchainDelayedOrder",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes[]",
+          "name": "priceUpdateData",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "executeOffchainDelayedOrder",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "sizeDelta",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "priceImpactDelta",
+          "type": "uint256"
+        }
+      ],
+      "name": "submitOffchainDelayedOrder",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "sizeDelta",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "priceImpactDelta",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "trackingCode",
+          "type": "bytes32"
+        }
+      ],
+      "name": "submitOffchainDelayedOrderWithTracking",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

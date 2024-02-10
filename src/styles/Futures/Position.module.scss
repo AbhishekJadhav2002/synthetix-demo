@@ -1,0 +1,27 @@
+@import "../mixin";
+@import "../variables";
+
+.position {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid $color-text-fourth;
+    @include center;
+    justify-content: space-between;
+
+    p {
+        padding: 0 10px;
+        border-right: 1px solid $color-text-fourth;
+    }
+
+    button {
+        margin-left: 10px;
+        padding: 8px 8px;
+        border: 1px solid $color-text-third;
+        border-radius: 5px;
+        font-size: 8px;
+        cursor: pointer;
+        color: red;
+        background-color: transparent;
+    }
+}

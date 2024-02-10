@@ -1,0 +1,159 @@
+@import "mixin";
+@import "variables";
+
+.nav {
+    position: relative;
+    @include center;
+    padding: 40px 0;
+
+    &__part {
+        @include center;
+
+        .logo__link {
+            @include center;
+            justify-content: flex-start;
+
+            .logo__image {
+                height: 20px;
+            }
+        }
+
+        .nav__links {
+            @include center;
+            gap: 10px;
+
+            .nav__link {
+                @include center;
+                justify-content: center;
+                padding: 10px 20px;
+                border-radius: 5px;
+                color: $color-text-third;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: lighten($color-bg, 10);
+                    color: $color-text-second;
+                }
+            }
+        }
+
+        .nav__buttons {
+            @include center;
+            gap: 16px;
+
+            .nav__button {
+                @include center;
+                justify-content: center;
+                padding: 10px 20px;
+                border-radius: 20px;
+                font-size: 16px;
+                cursor: pointer;
+                color: $color-text-first;
+                outline: none;
+                border: none;
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 155, 154, 1) 0%,
+                    14.318442153493699%,
+                    rgba(0, 139, 172, 1) 28.636884306987398%,
+                    48.396334478808704%,
+                    rgba(0, 106, 203, 1) 68.15578465063001%,
+                    84.077892325315%,
+                    rgba(47, 71, 240, 1) 100%
+                );
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__mobile__button {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @include center;
+        background-color: transparent;
+        color: #fff;
+        font-size: 20px;
+        padding: 4px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: none;
+
+        img {
+            width: 20px;
+            filter: invert(1);
+        }
+    }
+
+    &__mobile__menu {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 100;
+
+        &__open {
+            display: flex;
+        }
+
+        .nav__mobile__menu__links {
+            @include center(column);
+            gap: 10px;
+
+            .nav__mobile__menu__link {
+                @include center;
+                justify-content: center;
+                padding: 10px 20px;
+                border-radius: 5px;
+                color: $color-text-third;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: lighten($color-bg, 10);
+                    color: $color-text-second;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 30px 0;
+
+        &__part {
+            .nav__links {
+                display: none;
+            }
+
+            .nav__buttons {
+                display: none;
+            }
+        }
+
+        &__mobile__button {
+            display: flex;
+        }
+    }
+}

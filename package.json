@@ -1,0 +1,62 @@
+{
+  "name": "synthetix-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@pythnetwork/price-service-client": "^1.8.2",
+    "@pythnetwork/pyth-sdk-solidity": "^2.4.0",
+    "@synthetixio/wei": "^2.74.4",
+    "@web3modal/ethereum": "^2.3.0",
+    "@web3modal/react": "^2.3.0",
+    "axios": "^1.6.7",
+    "ethers": "^5.7.2",
+    "lodash.debounce": "^4.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-qr-code": "^2.0.12",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.21.3",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.3",
+    "sass": "^1.70.0",
+    "wagmi": "^0.12.12"
+  },
+  "devDependencies": {
+    "@typechain/ethers-v5": "^11.1.2",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/node": "^16.18.71",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "typechain": "^8.3.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "contracts": "typechain --target ethers-v5 --out-dir src/types/contracts 'src/config/abi/*.json'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

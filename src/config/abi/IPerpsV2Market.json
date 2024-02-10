@@ -1,0 +1,145 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IPerpsV2Market",
+  "sourceName": "contracts/interfaces/IPerpsV2Market.sol",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "priceImpactDelta",
+          "type": "uint256"
+        }
+      ],
+      "name": "closePosition",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "priceImpactDelta",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "trackingCode",
+          "type": "bytes32"
+        }
+      ],
+      "name": "closePositionWithTracking",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "liquidatePosition",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "sizeDelta",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "priceImpactDelta",
+          "type": "uint256"
+        }
+      ],
+      "name": "modifyPosition",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "sizeDelta",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "priceImpactDelta",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "trackingCode",
+          "type": "bytes32"
+        }
+      ],
+      "name": "modifyPositionWithTracking",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "recomputeFunding",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "lastIndex",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "marginDelta",
+          "type": "int256"
+        }
+      ],
+      "name": "transferMargin",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdrawAllMargin",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,26 @@
+@import "../mixin";
+@import "../variables";
+
+.headStats {
+    &__row {
+        @include center;
+        width: 100%;
+
+        .headStats__col {
+            padding: 10px;
+            border-left: 1px solid $color-text-third;
+            border-right: 1px solid $color-text-third;
+
+            .title {
+                font-size: 8px;
+                font-weight: 500;
+                color: $color-text-second;
+            }
+
+            .value {
+                font-weight: 600;
+                color: $color-text-first;
+            }
+        }
+    }
+}

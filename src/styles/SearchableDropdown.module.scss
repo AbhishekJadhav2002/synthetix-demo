@@ -1,0 +1,136 @@
+@import "mixin";
+@import "variables";
+
+.dropdown {
+    position: relative;
+    color: $color-text-first;
+    cursor: default;
+
+    .control {
+        @include center;
+        font-size: 20px;
+        font-weight: 550;
+
+        .selected__value {
+            input {
+                font-size: 20px;
+                font-weight: 550;
+                color: $color-text-first;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                box-sizing: border-box;
+                cursor: default;
+                outline: none;
+                transition: all 200ms ease;
+                width: 100%;
+
+                &::placeholder {
+                    color: $color-text-first;
+                }
+            }
+        }
+
+        .arrow {
+            border-color: $color-text-second transparent transparent;
+            border-style: solid;
+            border-width: 7px 7px 0;
+            content: " ";
+            display: block;
+            height: 0;
+            width: 0;
+        }
+
+        .open {
+            border-color: transparent transparent $color-text-second;
+            border-width: 0 7px 7px;
+        }
+    }
+
+    .options {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        box-sizing: border-box;
+        margin-top: -1px;
+        max-height: 200px;
+        overflow-y: auto;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 1000;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $color-text-second;
+            border-radius: 10px;
+        }
+
+        .note {
+            position: sticky;
+            top: 0;
+            padding: 2px 16px;
+            font-size: 8px;
+            font-weight: 300;
+            color: $color-text-fourth;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .option {
+            box-sizing: border-box;
+            color: $color-text-first;
+            cursor: pointer;
+            display: block;
+            padding: 8px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 200ms ease;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .option[aria-disabled="true"] {
+            color: $color-text-third;
+            cursor: not-allowed;
+        }
+
+        .selected,
+        .option:not([aria-disabled="true"]):hover {
+            background-color: gray;
+        }
+    }
+
+    .open {
+        display: block;
+    }
+
+    @media screen and (max-width: $mobile) {
+        .control {
+            font-size: 14px;
+
+            .selected__value {
+                input {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .options {
+            min-width: 200px;
+
+            .option {
+                font-size: 12px;
+            }
+        }
+    }
+}
